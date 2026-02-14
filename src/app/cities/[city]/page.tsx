@@ -11,6 +11,7 @@ import { useLocation } from "@/context/location-context";
 import { useEffect } from "react";
 import { ExploreLocalities } from "@/components/explore-localities";
 import { PopularDishes } from "@/components/popular-dishes";
+import { CitiesSection } from "@/components/cities-section";
 
 // For demo, we can just use a static list of cities. In a real app, this might come from an API.
 const CITIES = [
@@ -68,6 +69,7 @@ export default function CityPage({ params }: CityPageProps) {
       <CityRestaurantListing restaurants={restaurants} />
       <FoodCulture cityName={cityName} />
       {isBangalore && <ExploreLocalities cityName={cityName} />}
+      <CitiesSection />
     </div>
   );
 }
