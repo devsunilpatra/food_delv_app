@@ -1,3 +1,4 @@
+"use client";
 
 import { CategoryCarousel } from "@/components/category-carousel";
 import { CityBanner } from "@/components/city-banner";
@@ -6,6 +7,8 @@ import { FoodCulture } from "@/components/food-culture";
 import { RestaurantChains } from "@/components/restaurant-chains";
 import { restaurants } from "@/lib/data";
 import { notFound } from "next/navigation";
+import { useLocation } from "@/context/location-context";
+import { useEffect } from "react";
 
 // For demo, we can just use a static list of cities. In a real app, this might come from an API.
 const CITIES = [
@@ -40,6 +43,14 @@ type CityPageProps = {
 
 export default function CityPage({ params }: CityPageProps) {
   const cityName = decodeURIComponent(params.city);
+  const { locations, setCurrentLocation } = useLocation();
+
+  useEffect(() => {
+    const newLocation = locations.find((l) => l.name === cityName);
+    if (newLocation) {
+      setCurrentLocation(newLocation);
+    }
+  }, [cityName, locations, setCurrentLocation]);
 
   if (!CITIES.map((c) => c.toLowerCase()).includes(cityName.toLowerCase())) {
     notFound();

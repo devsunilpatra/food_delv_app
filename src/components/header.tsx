@@ -32,17 +32,20 @@ import {
   SelectValue,
 } from "./ui/select";
 import { useFilter } from "@/context/filter-context";
+import { useRouter } from "next/navigation";
 
 export function SiteHeader() {
   const { items } = useCart();
   const { user, isLoggedIn, logout } = useAuth();
   const { currentLocation, setCurrentLocation, locations } = useLocation();
   const { searchTerm, setSearchTerm } = useFilter();
+  const router = useRouter();
 
   const handleLocationChange = (locationName: string) => {
     const newLocation = locations.find((l) => l.name === locationName);
     if (newLocation) {
       setCurrentLocation(newLocation);
+      router.push(`/cities/${encodeURIComponent(newLocation.name)}`);
     }
   };
 
