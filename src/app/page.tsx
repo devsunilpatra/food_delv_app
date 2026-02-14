@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { Recommendations } from "@/components/recommendations";
+import { CategoryCarousel } from "@/components/category-carousel";
 
 export default function Home() {
   const heroImage = PlaceHolderImages.find((img) => img.id === "hero-image");
@@ -38,6 +39,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <CategoryCarousel />
 
       <div className="container mx-auto px-4">
         <Recommendations />
