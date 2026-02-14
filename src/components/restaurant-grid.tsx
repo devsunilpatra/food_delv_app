@@ -1,5 +1,6 @@
 "use client";
 
+import { useMemo } from "react";
 import type { Restaurant } from "@/lib/types";
 import { RestaurantCard } from "./restaurant-card";
 import { useLocation } from "@/context/location-context";
@@ -14,23 +15,29 @@ export function RestaurantGrid({ restaurants }: RestaurantGridProps) {
   const { searchTerm } = useFilter();
   const { currentLocation } = useLocation();
 
-  const sorted = [...restaurants]
-    .map((restaurant) => ({
-      ...restaurant,
-      distance: getDistanceFromLatLonInKm(
-        currentLocation.latitude,
-        currentLocation.longitude,
-        restaurant.latitude,
-        restaurant.longitude
-      ),
-    }))
-    .sort((a, b) => a.distance - b.distance);
+  const sortedAndFilteredRestaurants = useMemo(() => {
+    const sorted = restaurants
+      .map((restaurant) => ({
+        ...restaurant,
+        distance: getDistanceFromLatLonInKm(
+          currentLocation.latitude,
+          currentLocation.longitude,
+          restaurant.latitude,
+          restaurant.longitude
+        ),
+      }))
+      .sort((a, b) => a.distance - b.distance);
 
-  const sortedAndFilteredRestaurants = sorted.filter(
-    (restaurant) =>
-      restaurant.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      restaurant.cuisine.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+    if (!searchTerm) {
+      return sorted;
+    }
+
+    return sorted.filter(
+      (restaurant) =>
+        restaurant.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        restaurant.cuisine.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }, [restaurants, currentLocation, searchTerm]);
 
   return (
     <div className="flex flex-col gap-8">
