@@ -66,10 +66,3 @@ export default function CityPage({ params }: CityPageProps) {
     </div>
   );
 }
-
-// This function can be used to generate static paths if we want to pre-render these pages at build time.
-export async function generateStaticParams() {
-  return CITIES.map((city) => ({
-    city: encodeURIComponent(city),
-  }));
-}
