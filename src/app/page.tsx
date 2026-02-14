@@ -6,12 +6,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { Recommendations } from "@/components/recommendations";
 import { CategoryCarousel } from "@/components/category-carousel";
+import { CitiesSection } from "@/components/cities-section";
 
 export default function Home() {
   const heroImage = PlaceHolderImages.find((img) => img.id === "hero-image");
 
   return (
-    <div className="flex flex-col gap-12 md:gap-16 lg:gap-24">
+    <div className="flex flex-col gap-12 pb-12 md:gap-16 md:pb-16 lg:gap-24 lg:pb-24">
       <section className="relative h-[60vh] max-h-[600px] w-full">
         {heroImage && (
           <Image
@@ -52,6 +53,8 @@ export default function Home() {
         </h2>
         <RestaurantGrid restaurants={restaurants} />
       </section>
+
+      <CitiesSection />
     </div>
   );
 }
