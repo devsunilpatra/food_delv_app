@@ -17,6 +17,8 @@ export type Restaurant = {
   priceRange: string;
   imageId?: string;
   menu: MenuItem[];
+  latitude: number;
+  longitude: number;
 };
 
 export type CartItem = {

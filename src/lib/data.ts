@@ -11,6 +11,8 @@ export const restaurants: Restaurant[] = [
     deliveryTime: "25-35 min",
     priceRange: "20-40",
     imageId: "restaurant-1",
+    latitude: 34.0522,
+    longitude: -118.2437,
     menu: [
       {
         id: "m1-1",
@@ -45,6 +47,8 @@ export const restaurants: Restaurant[] = [
     deliveryTime: "20-30 min",
     priceRange: "15-30",
     imageId: "restaurant-2",
+    latitude: 34.0195,
+    longitude: -118.4912,
     menu: [
       {
         id: "m2-1",
@@ -79,6 +83,8 @@ export const restaurants: Restaurant[] = [
     deliveryTime: "35-45 min",
     priceRange: "30-60",
     imageId: "restaurant-3",
+    latitude: 34.0928,
+    longitude: -118.3287,
     menu: [
       {
         id: "m3-1",
@@ -113,6 +119,8 @@ export const restaurants: Restaurant[] = [
     deliveryTime: "30-40 min",
     priceRange: "25-50",
     imageId: "restaurant-4",
+    latitude: 34.0583,
+    longitude: -118.309,
     menu: [
       {
         id: "m4-1",
@@ -147,6 +155,8 @@ export const restaurants: Restaurant[] = [
     deliveryTime: "15-25 min",
     priceRange: "15-25",
     imageId: "restaurant-5",
+    latitude: 34.0736,
+    longitude: -118.4004,
     menu: [
       {
         id: "m5-1",
@@ -174,6 +184,8 @@ export const restaurants: Restaurant[] = [
     deliveryTime: "20-30 min",
     priceRange: "15-35",
     imageId: "restaurant-8",
+    latitude: 34.0381,
+    longitude: -118.1648,
     menu: [
       {
         id: "m6-1",

@@ -1,10 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import type { Restaurant } from "@/lib/types";
 import { Input } from "./ui/input";
 import { RestaurantCard } from "./restaurant-card";
 import { Search } from "lucide-react";
+import { useLocation } from "@/context/location-context";
+import { getDistanceFromLatLonInKm } from "@/lib/utils";
 
 type RestaurantGridProps = {
   restaurants: Restaurant[];
@@ -12,10 +14,25 @@ type RestaurantGridProps = {
 
 export function RestaurantGrid({ restaurants }: RestaurantGridProps) {
   const [searchTerm, setSearchTerm] = useState("");
+  const { currentLocation } = useLocation();
 
-  const filteredRestaurants = restaurants.filter((restaurant) =>
-    restaurant.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const sortedAndFilteredRestaurants = useMemo(() => {
+    const sorted = [...restaurants]
+      .map((restaurant) => ({
+        ...restaurant,
+        distance: getDistanceFromLatLonInKm(
+          currentLocation.latitude,
+          currentLocation.longitude,
+          restaurant.latitude,
+          restaurant.longitude
+        ),
+      }))
+      .sort((a, b) => a.distance - b.distance);
+
+    return sorted.filter((restaurant) =>
+      restaurant.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }, [restaurants, currentLocation, searchTerm]);
 
   return (
     <div className="flex flex-col gap-8">
@@ -30,9 +47,9 @@ export function RestaurantGrid({ restaurants }: RestaurantGridProps) {
         />
       </div>
 
-      {filteredRestaurants.length > 0 ? (
+      {sortedAndFilteredRestaurants.length > 0 ? (
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {filteredRestaurants.map((restaurant) => (
+          {sortedAndFilteredRestaurants.map((restaurant) => (
             <RestaurantCard key={restaurant.id} restaurant={restaurant} />
           ))}
         </div>

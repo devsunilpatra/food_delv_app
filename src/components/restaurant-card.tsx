@@ -9,13 +9,13 @@ import {
 } from "./ui/card";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Star, Clock } from "lucide-react";
+import { Star, Clock, MapPin } from "lucide-react";
 import { Badge } from "./ui/badge";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 type RestaurantCardProps = {
-  restaurant: Restaurant;
+  restaurant: Restaurant & { distance?: number };
   className?: string;
 };
 
@@ -56,10 +56,17 @@ export function RestaurantCard({ restaurant, className }: RestaurantCardProps) {
               {restaurant.rating}
             </span>
           </div>
-          <div className="flex items-center gap-1">
-            <Clock className="h-4 w-4" />
-            <span>{restaurant.deliveryTime}</span>
-          </div>
+          {restaurant.distance != null ? (
+            <div className="flex items-center gap-1">
+              <MapPin className="h-4 w-4" />
+              <span>{restaurant.distance.toFixed(1)} km</span>
+            </div>
+          ) : (
+            <div className="flex items-center gap-1">
+              <Clock className="h-4 w-4" />
+              <span>{restaurant.deliveryTime}</span>
+            </div>
+          )}
           <Badge variant="secondary" className="font-normal">
             ${restaurant.priceRange}
           </Badge>
