@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -23,6 +24,7 @@ const CITIES = [
   "Washington DC",
   "Nashville",
   "Las Vegas",
+  "Bangalore",
 ];
 
 export function CitiesSection() {
@@ -35,7 +37,7 @@ export function CitiesSection() {
         {CITIES.map((city) => (
           <Link
             key={city}
-            href="#"
+            href={`/cities/${encodeURIComponent(city)}`}
             className="mb-2 block rounded-md p-1 text-muted-foreground hover:bg-accent/50 hover:text-primary"
           >
             {city}

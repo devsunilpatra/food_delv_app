@@ -89,6 +89,18 @@
       "description": "A california roll.",
       "imageUrl": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzdXNoaSUyMHJvbGx8ZW58MHx8fHwxNzcxMDM4Mzg3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "sushi roll"
+    },
+    {
+      "id": "city-banner",
+      "description": "A skyline of a bustling city at dusk.",
+      "imageUrl": "https://images.unsplash.com/photo-1542956942-73d4a4601399?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjaXR5JTIwc2t5bGluZXxlbnwwfHx8fDE3NzEyMjI5ODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "city skyline"
+    },
+    {
+      "id": "food-culture",
+      "description": "A vibrant street food market.",
+      "imageUrl": "https://images.unsplash.com/photo-1541344437433-72417b1899d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzdHJlZXQlMjBmb29kJTIwbWFya2V0fGVufDB8fHx8MTc3MTIyMzAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "food market"
     }
   ]
 }
