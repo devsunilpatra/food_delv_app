@@ -1,3 +1,94 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-image",
+      "description": "A delicious spread of various foods on a table.",
+      "imageUrl": "https://images.unsplash.com/photo-1564638305579-5e395c9b62c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmb29kJTIwc3ByZWFkfGVufDB8fHx8MTc3MTA0NjQ5NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "food spread"
+    },
+    {
+      "id": "restaurant-1",
+      "description": "Exterior of a modern pizza parlor.",
+      "imageUrl": "https://images.unsplash.com/photo-1494346480775-936a9f0d0877?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwaXp6YSUyMHJlc3RhdXJhbnR8ZW58MHx8fHwxNzcxMDA1ODM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pizza restaurant"
+    },
+    {
+      "id": "restaurant-2",
+      "description": "A gourmet burger on a wooden platter.",
+      "imageUrl": "https://images.unsplash.com/photo-1695606392868-b9ed053e1c0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YnVyZ2VyJTIwam9pbnR8ZW58MHx8fHwxNzcwOTY4NTMxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "burger joint"
+    },
+    {
+      "id": "restaurant-3",
+      "description": "A variety of fresh sushi rolls.",
+      "imageUrl": "https://images.unsplash.com/photo-1675372698661-63c3191c7790?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzdXNoaSUyMGJhcnxlbnwwfHx8fDE3NzEwMjA0MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sushi bar"
+    },
+    {
+      "id": "restaurant-4",
+      "description": "A steaming bowl of Indian curry.",
+      "imageUrl": "https://images.unsplash.com/photo-1581600140682-d4e68c8cde32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxpbmRpYW4lMjBmb29kfGVufDB8fHx8MTc3MTAzMTUwNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "indian food"
+    },
+    {
+      "id": "restaurant-5",
+      "description": "A healthy salad bowl with fresh vegetables.",
+      "imageUrl": "https://images.unsplash.com/photo-1670437664511-1f4e3442aa68?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzYWxhZCUyMGNhZmV8ZW58MHx8fHwxNzcxMDQ2NDkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "salad cafe"
+    },
+    {
+      "id": "restaurant-6",
+      "description": "Freshly baked pastries in a bakery display.",
+      "imageUrl": "https://images.unsplash.com/photo-1638202956270-8167b5c88ce6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxiYWtlcnklMjBzaG9wfGVufDB8fHx8MTc3MTA0NjQ5M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bakery shop"
+    },
+    {
+      "id": "restaurant-7",
+      "description": "A plate of authentic Italian pasta.",
+      "imageUrl": "https://images.unsplash.com/photo-1630485096198-6abfbabe57dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxpdGFsaWFuJTIwdHJhdHRvcmlhfGVufDB8fHx8MTc3MTA0NjQ5NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "italian trattoria"
+    },
+    {
+      "id": "restaurant-8",
+      "description": "Spicy Mexican tacos with lime.",
+      "imageUrl": "https://images.unsplash.com/photo-1758701446511-0c87a9aaddc0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtZXhpY2FuJTIwdGFxdWVyaWF8ZW58MHx8fHwxNzcxMDQ2NDkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mexican taqueria"
+    },
+    {
+      "id": "recommendation-1",
+      "description": "A recommended cozy restaurant.",
+      "imageUrl": "https://images.unsplash.com/photo-1535543332498-ec6ec83eed76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y296eSUyMHJlc3RhdXJhbnR8ZW58MHx8fHwxNzcxMDQ2NDkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cozy restaurant"
+    },
+    {
+      "id": "recommendation-2",
+      "description": "A recommended modern restaurant.",
+      "imageUrl": "https://images.unsplash.com/photo-1758571163935-90602bdf6cb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtb2Rlcm4lMjBlYXRlcnl8ZW58MHx8fHwxNzcxMDQ2NDkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern eatery"
+    },
+    {
+      "id": "recommendation-3",
+      "description": "A recommended family restaurant.",
+      "imageUrl": "https://images.unsplash.com/photo-1564759224907-65b945ff0e84?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmYW1pbHklMjByZXN0YXVyYW50fGVufDB8fHx8MTc3MTA0NjQ5M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "family restaurant"
+    },
+    {
+      "id": "menu-item-1",
+      "description": "A slice of pepperoni pizza.",
+      "imageUrl": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwZXBwZXJvbmklMjBwaXp6YXxlbnwwfHx8fDE3NzEwMjQ3NDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pepperoni pizza"
+    },
+    {
+      "id": "menu-item-2",
+      "description": "A cheeseburger with fries.",
+      "imageUrl": "https://images.unsplash.com/photo-1654791395364-b66be3a2bc99?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaGVlc2VidXJnZXIlMjBmcmllc3xlbnwwfHx8fDE3NzEwNDQ3NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cheeseburger fries"
+    },
+    {
+      "id": "menu-item-3",
+      "description": "A california roll.",
+      "imageUrl": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzdXNoaSUyMHJvbGx8ZW58MHx8fHwxNzcxMDM4Mzg3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sushi roll"
+    }
+  ]
 }
