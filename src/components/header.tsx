@@ -31,11 +31,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
+import { useFilter } from "@/context/filter-context";
 
 export function SiteHeader() {
   const { items } = useCart();
   const { user, isLoggedIn, logout } = useAuth();
   const { currentLocation, setCurrentLocation, locations } = useLocation();
+  const { searchTerm, setSearchTerm } = useFilter();
 
   const handleLocationChange = (locationName: string) => {
     const newLocation = locations.find((l) => l.name === locationName);
@@ -66,6 +68,8 @@ export function SiteHeader() {
                 type="search"
                 placeholder="Search restaurants..."
                 className="w-full rounded-full bg-muted pl-10"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
               />
             </div>
             <div className="hidden items-center gap-1 md:flex">
