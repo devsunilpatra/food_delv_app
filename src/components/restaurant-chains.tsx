@@ -11,14 +11,19 @@ import {
 import { restaurants } from "@/lib/data";
 import { RestaurantCard } from "./restaurant-card";
 
-export function RestaurantChains() {
+type RestaurantChainsProps = {
+  cityName: string;
+};
+
+export function RestaurantChains({ cityName }: RestaurantChainsProps) {
   // For demo purposes, let's just pick a few restaurants to be "chains"
   const chains = restaurants.slice(0, 4);
+  const title = `Popular Restaurant Chains in ${cityName}`;
 
   return (
     <section className="container mx-auto px-4">
       <h2 className="mb-8 text-center text-3xl font-bold tracking-tight md:text-4xl">
-        Popular Restaurant Chains
+        {title}
       </h2>
       <Carousel
         opts={{

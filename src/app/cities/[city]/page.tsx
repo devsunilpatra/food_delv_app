@@ -9,6 +9,8 @@ import { restaurants } from "@/lib/data";
 import { notFound } from "next/navigation";
 import { useLocation } from "@/context/location-context";
 import { useEffect } from "react";
+import { ExploreLocalities } from "@/components/explore-localities";
+import { PopularDishes } from "@/components/popular-dishes";
 
 // For demo, we can just use a static list of cities. In a real app, this might come from an API.
 const CITIES = [
@@ -44,6 +46,7 @@ type CityPageProps = {
 export default function CityPage({ params }: CityPageProps) {
   const cityName = decodeURIComponent(params.city);
   const { locations, setCurrentLocation } = useLocation();
+  const isBangalore = cityName.toLowerCase() === "bangalore";
 
   useEffect(() => {
     const newLocation = locations.find((l) => l.name === cityName);
@@ -60,9 +63,11 @@ export default function CityPage({ params }: CityPageProps) {
     <div className="flex flex-col gap-12 pb-12 md:gap-16 md:pb-16 lg:gap-24 lg:pb-24">
       <CityBanner cityName={cityName} />
       <CategoryCarousel />
-      <RestaurantChains />
+      <RestaurantChains cityName={cityName} />
+      {isBangalore && <PopularDishes cityName={cityName} />}
       <CityRestaurantListing restaurants={restaurants} />
       <FoodCulture cityName={cityName} />
+      {isBangalore && <ExploreLocalities cityName={cityName} />}
     </div>
   );
 }

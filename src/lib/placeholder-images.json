@@ -101,6 +101,42 @@
       "description": "A vibrant street food market.",
       "imageUrl": "https://images.unsplash.com/photo-1541344437433-72417b1899d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzdHJlZXQlMjBmb29kJTIwbWFya2V0fGVufDB8fHx8MTc3MTIyMzAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "food market"
+    },
+    {
+      "id": "dish-biryani",
+      "description": "A bowl of flavorful Biryani.",
+      "imageUrl": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=500&q=80",
+      "imageHint": "biryani food"
+    },
+    {
+      "id": "dish-dosa",
+      "description": "A crispy Masala Dosa.",
+      "imageUrl": "https://images.unsplash.com/photo-1668665741638-ceb4b8c030b4?w=500&q=80",
+      "imageHint": "masala dosa"
+    },
+    {
+      "id": "dish-paneer",
+      "description": "A rich Paneer Butter Masala curry.",
+      "imageUrl": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=500&q=80",
+      "imageHint": "paneer curry"
+    },
+    {
+      "id": "dish-idli",
+      "description": "Steamed Idli with Vada.",
+      "imageUrl": "https://images.unsplash.com/photo-1609341499119-a1b6f5a34e5a?w=500&q=80",
+      "imageHint": "idli vada"
+    },
+    {
+      "id": "dish-chole",
+      "description": "Spicy Chole Bhature.",
+      "imageUrl": "https://images.unsplash.com/photo-1604329249261-694935472e02?w=500&q=80",
+      "imageHint": "chole bhature"
+    },
+    {
+      "id": "dish-kebab",
+      "description": "Grilled Kebabs on skewers.",
+      "imageUrl": "https://images.unsplash.com/photo-1599351110598-a15b49a56c07?w=500&q=80",
+      "imageHint": "grilled kebabs"
     }
   ]
 }
